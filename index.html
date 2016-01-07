@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<link href="/static/css/style.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>Fare Predictor!!</title>
+
+<style>
+.center {
+    margin: auto;
+    width: 60%;
+    border:3px solid #73AD21;
+    padding: 10px;
+}
+
+body {
+    background-color: #cce5ff;
+}
+
+input[type="text"], textarea {
+
+    background-color : #e5f7ff; 
+
+}
+
+.padd {
+
+    padding-bottom: 50px;
+}
+
+
+</style>
+<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyAFBB1YevPWPUJeZbr7MPCqYlHC-hS6sPw&sensor=true_OR_false"></script>
+<script type="text/javascript">
+
+var map = null;
+var geocoder = null;
+
+function initialize() {
+
+    map = new google.maps.Map(
+            document.getElementById('map_canvas'), {
+center: new google.maps.LatLng(40.4419, -73.1419),
+zoom: 5,
+mapTypeId: google.maps.MapTypeId.ROADMAP
+});
+geocoder = new google.maps.Geocoder();
+}
+</script>
+</head>
+
+<body ng-app="nycTaxiApp" onload="initialize()" onunload="GUnload()">
+<div class="btn-group btn-group-justified" class= "padd">
+    <a href="" class="btn btn-primary" ng-click="changePredictorToSeasonal()">Taxi fare Prediction for NYC</a>
+</div>  
+
+<div ng-controller="dataController">
+
+    <div class="container">
+        <form role="form" action="#" onsubmit="showAddress(this.address.value); return false">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <label for="pickup">Enter pickup location :</label>
+                        <input type="text" style="width:350px" ng-model="pickup" />
+                    </div>
+                    <div class="col-xs-6">
+                        <label for="dropOff">Enter dropOff location :</label>
+                        <input type="text" style="width:350px" ng-model="dropOff"/>
+                    </div>
+                </div>
+                <button type="button"  id="singlebutton" name="singlebutton" class="btn btn-primary center-block" ng-click="showAddress()" >Get Marker and Distance between them!</button>
+            </div>
+        </form>
+        <p class="text-center" style="font-size:200%;">Distance between two locations is: {{distance}}miles</p>
+        <form role="form" action="#" onsubmit="showAddress(this.address.value); return false">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <label for="date">Enter date :</label>
+                        <input type="text" style="width:350px" ng-model="date">
+                    </div>
+                    <div class="col-xs-6">
+                        <label for="time">Enter time :</label>
+                        <input type="text" style="width:350px" ng-model="time">
+                    </div>
+                </div>
+                <button type="button"  id="singlebutton" name="singlebutton" class="btn btn-primary center-block" ng-click="predict()" >Predict Fare!</button>
+            </div>
+        </form>
+        <div class="center" id="map_canvas" style="width: 800px; height: 350px" ></div>
+        <div class="row">
+            <p class="text-center" class="col-lg-3 col-md-3 col-sm-4 col-xs-12" style="font-size:250%;">The predicted fare for these two points is:{{predictedFare()}}$</p>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="static/js/app.js"></script>
+
+</body>
+</html>
+
+
+
