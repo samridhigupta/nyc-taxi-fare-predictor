@@ -1,0 +1,84 @@
+need to get features to select on
+  - seasonal prediction
+    - divide data into each season
+    - select randomly from each season
+  - prediction based on day of week
+    - divide data into working days and weekends
+  - generalize across time of day
+
+features:
+  location
+  distance from center of city
+  distance from the nearest subway
+  time of day
+  day of week
+  passenger count
+  distance
+  tolls 
+
+Metered Fare Information
+
+    Onscreen rate is ‘Rate #01 – Standard City Rate.’
+    The initial charge is $2.50.
+    Plus 50 cents per 1/5 mile or 50 cents per 60 seconds in slow traffic or when the vehicle is stopped.
+    In moving traffic on Manhattan streets, the meter should “click” approximately every four downtown blocks, or one block going cross-town (East-West).
+    There is a 50-cent MTA State Surcharge for all trips that end in New York City or Nassau, Suffolk, Westchester, Rockland, Dutchess, Orange or Putnam Counties.
+    There is a 30-cent Improvement Surcharge. 
+    There is a daily 50-cent surcharge from 8pm to 6am.
+    There is a $1 surcharge from 4pm to 8pm on weekdays, excluding holidays.
+    Passengers must pay all bridge and tunnel tolls.
+    Your receipt will show your total fare including tolls. Please take your receipt.
+    The driver is not required to accept bills over $20.
+    Please tip your driver for safety and good service.
+    There are no charges for extra passengers or bags.
+
+Toll Information
+
+    The passenger is responsible for paying all bridge and tunnel tolls.
+    Use of E-ZPass
+        A driver must use an E-ZPass when taking a toll bridge or tunnel and must pass the discounted toll amount to the passenger.  The amount of the toll will be added to the metered fare at the end of the trip.
+    Round-trip tolls
+        Passengers must pay all tolls to and from the destination in Westchester and Nassau Counties.
+        Passengers must pay return tolls for trips over the Cross Bay Veterans, and Marine Parkway-Gil Hodges Memorial Bridges.
+        Passengers must pay for all tolls to and from Newark Airport.
+
+Credit/Debit Cards
+
+    Passengers may pay for trips with cash or credit/debit/prepaid card.
+    There are no minimum fares required for credit/debit/prepaid card payment.
+    There are no additional fees (surcharges) for paying with your credit/debit/prepaid card.
+
+Airport Trips
+
+    To & From LaGuardia Airport:
+        This is a metered fare. See Metered Fare information above.
+    To/From JFK and any location in Manhattan:
+        Onscreen rate is ‘Rate #02 – JFK Airport.’
+        This is a flat fare of $52 plus tolls, the 50-cent MTA State Surcharge, and the 30-cent Improvement Surcharge.
+        Passenger is responsible for paying all tolls.
+        Please tip your driver for safety and good service.
+    From JFK to other New York City destinations:
+        This is a metered fare. See Metered Fare information above.
+    To Newark Airport:
+        Onscreen rate is ‘Rate #03 – Newark Airport.’
+        This is a metered fare. See Metered Fare information above.
+        There is a $17.50 Newark Surcharge.
+        Passenger is responsible for paying all roundtrip tolls.
+        There is a 30-cent Improvement Surcharge. 
+        Please tip your driver for safety and good service.
+
+Out of Town Trips
+
+    Westchester & Nassau Counties:
+        This is a metered fare. The on-screen rate is ‘Rate #01 – Standard City Rate’ within the City limit.
+        Once the taxi goes beyond the City limit to Nassau or Westchester, the on-screen rate message should read ‘Rate #04 – Out of City Rate to Nassau or Westchester.’ The metered fare is double the amount from the City limit to your destination.  Additionally, a message should appear on screen alerting the passenger of the rate change. 
+        Passenger is responsible for paying all roundtrip tolls.
+         There is a 50-cent MTA State Surcharge and a 30-cent Improvement Surcharge.
+    Other Points Outside the City:
+        The Driver may choose whether to take such trips. The fare must be mutually agreed upon before the trip may begin.
+        Negotiated Flat Fare – The fare will be a Flat Rate negotiated between the Driver and Passenger.
+        The onscreen rate message should read ‘Rate #05 – Out of City Negotiated Flat Rate’. There
+        The 50-cent MTA State Surcharge must be added to the flat rate for any trip that ends in the following counties: Dutchess, Orange, Putnam, Rockland or Suffolk.
+        There is a 30-cent Improvement Surcharge. 
+
+
